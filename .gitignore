@@ -3,3 +3,6 @@
 
 # Ignore Gradle build output directory
 build
+
+# output dir create by VS Code
+bin
