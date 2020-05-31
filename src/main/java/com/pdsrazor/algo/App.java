@@ -3,12 +3,48 @@
  */
 package com.pdsrazor.algo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.pdsrazor.algo.list.ListDemo;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    private static HashMap<String, MyDemo> sDemos = new HashMap<String, MyDemo>();
+    static {
+        init();
+    }
+    public static void main(String[] args) {    
+        if (args.length < 3) {
+            usage(args);
+            return;
+        }
+        MyDemo demo = sDemos.get(args[0]);
+        if (demo == null) {
+            System.out.println("Unsupport demo");
+            return;
+        }
+        String[] demoArgs = new String[args.length-1];
+        for (int i = 0; i < args.length - 1; i++) {
+            demoArgs[i] = args[i+1];
+        }
+        demo.doCmd(demoArgs);
+        return;
+    }
+
+    public static void usage(String[] args) {
+        System.out.println("Usage: args: <Demo> <DemoItem>, eg: ListDemo revertLinkedList");
+        System.out.println("Support demo: ");
+        for (Map.Entry<String, MyDemo> demo : sDemos.entrySet()) {
+            demo.getValue().usage();
+        }
+    }
+
+    public static void init() {
+        sDemos.put("ListDemo", new ListDemo());
     }
 }
