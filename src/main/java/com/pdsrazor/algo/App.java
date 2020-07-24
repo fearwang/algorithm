@@ -7,7 +7,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pdsrazor.algo.heap.HeapDemo;
 import com.pdsrazor.algo.list.ListDemo;
+import com.pdsrazor.algo.sort.SortDemo;
+import com.pdsrazor.algo.tree.BinaryTreeDemo;
+import com.pdsrazor.algo.search.SearchDemo;
 
 public class App {
     public String getGreeting() {
@@ -46,5 +50,9 @@ public class App {
 
     public static void init() {
         sDemos.put("ListDemo", new ListDemo());
+        sDemos.put("SortDemo", new SortDemo());
+        sDemos.put("SearchDemo", new SearchDemo());
+        sDemos.put("BinaryTreeDemo", new BinaryTreeDemo());
+        sDemos.put("HeapDemo", new HeapDemo());
     }
 }
