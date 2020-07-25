@@ -12,6 +12,7 @@ import com.pdsrazor.algo.list.ListDemo;
 import com.pdsrazor.algo.sort.SortDemo;
 import com.pdsrazor.algo.strMatch.StringMatchDemo;
 import com.pdsrazor.algo.tree.BinaryTreeDemo;
+import com.pdsrazor.algo.trietree.TrieTreeDemo;
 import com.pdsrazor.algo.search.SearchDemo;
 
 public class App {
@@ -56,5 +57,6 @@ public class App {
         sDemos.put("BinaryTreeDemo", new BinaryTreeDemo());
         sDemos.put("HeapDemo", new HeapDemo());
         sDemos.put("StringMatchDemo", new StringMatchDemo());
+        sDemos.put("TrieTreeDemo", new TrieTreeDemo());
     }
 }
