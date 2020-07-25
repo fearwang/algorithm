@@ -129,6 +129,7 @@ class MyTrieTree {
                 }
             }
             if (node.mIdx >= 26) {
+                node.mIdx = 0;
                 stack.pop();
             }   
         }
@@ -165,6 +166,7 @@ class MyTrieTree {
                 }
             }
             if (n.mIdx >= 26) {
+                n.mIdx = 0; // pop之前reset idx
                 chs.pop();
             }
         }

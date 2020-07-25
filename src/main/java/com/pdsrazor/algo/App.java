@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pdsrazor.algo.graph.GraphDemo;
 import com.pdsrazor.algo.heap.HeapDemo;
 import com.pdsrazor.algo.list.ListDemo;
 import com.pdsrazor.algo.sort.SortDemo;
@@ -58,5 +59,6 @@ public class App {
         sDemos.put("HeapDemo", new HeapDemo());
         sDemos.put("StringMatchDemo", new StringMatchDemo());
         sDemos.put("TrieTreeDemo", new TrieTreeDemo());
+        sDemos.put("GraphDemo", new GraphDemo());
     }
 }
