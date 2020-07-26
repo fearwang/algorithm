@@ -376,4 +376,5 @@ long findRootReferrerId(long actorId) {
 
 ## 深度和广度优先搜索：如何找出社交网络中的三度好友关系？
 
-1.
+1.bfs dfs
+2.解答开篇：bfs适合解决
