@@ -8,12 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.pdsrazor.algo.graph.GraphDemo;
+import com.pdsrazor.algo.greedyalgo.GreedyAlgoDemo;
 import com.pdsrazor.algo.heap.HeapDemo;
 import com.pdsrazor.algo.list.ListDemo;
 import com.pdsrazor.algo.sort.SortDemo;
 import com.pdsrazor.algo.strMatch.StringMatchDemo;
 import com.pdsrazor.algo.tree.BinaryTreeDemo;
 import com.pdsrazor.algo.trietree.TrieTreeDemo;
+import com.pdsrazor.jzoffer.JzOfferDemo;
 import com.pdsrazor.algo.search.SearchDemo;
 
 public class App {
@@ -60,5 +62,7 @@ public class App {
         sDemos.put("StringMatchDemo", new StringMatchDemo());
         sDemos.put("TrieTreeDemo", new TrieTreeDemo());
         sDemos.put("GraphDemo", new GraphDemo());
+        sDemos.put("GreedyAlgoDemo", new GreedyAlgoDemo());
+        sDemos.put("JzOfferDemo", new JzOfferDemo());
     }
 }
