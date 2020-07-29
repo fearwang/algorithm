@@ -10,6 +10,8 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  GetLeastNumbers <k>");
         System.out.println("  TreeDepth <size>");
         System.out.println("  IsBalancedTree <size>");
+        System.out.println("  LastRemaining <nchild> <mCount>");
+        System.out.println("  DeleteDuplication");
     }
 
     @Override
@@ -29,6 +31,12 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("IsBalancedTree")) {
             new Jz39_IsBalancedTree().solute(solutionArgs);
+        }
+        if (args[0].equals("LastRemaining")) {
+            new Jz46_LastRemaining().solute(solutionArgs);
+        }
+        if (args[0].equals("DeleteDuplication")) {
+            new Jz56_deleteDuplication().solute(solutionArgs);
         }
         return 0;
     }
