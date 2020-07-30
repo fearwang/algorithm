@@ -12,6 +12,10 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  IsBalancedTree <size>");
         System.out.println("  LastRemaining <nchild> <mCount>");
         System.out.println("  DeleteDuplication");
+        System.out.println("  GetNextForInOrder <size>");
+        System.out.println("  isSymmetrical <size>");
+        System.out.println("  PrintLevel <size>");
+        System.out.println("  PrintZ <size>");
     }
 
     @Override
@@ -37,6 +41,18 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("DeleteDuplication")) {
             new Jz56_deleteDuplication().solute(solutionArgs);
+        }
+        if (args[0].equals("GetNextForInOrder")) {
+            new Jz57_NextNodeForInOrder().solute(solutionArgs);
+        }
+        if (args[0].equals("isSymmetrical")) {
+            new Jz58_isSymmetrical().solute(solutionArgs);
+        }
+        if (args[0].equals("PrintLevel")) {
+            new Jz60_PrintLevel().solute(solutionArgs);
+        }
+        if (args[0].equals("PrintZ")) {
+            new Jz59_PrintZ().solute(solutionArgs);
         }
         return 0;
     }

@@ -3,6 +3,7 @@ package com.pdsrazor.algo.utils;
 public class BinaryTreeNode {
     public BinaryTreeNode left = null;
     public BinaryTreeNode right = null;
+    public BinaryTreeNode parent = null;
     public int value = 0;
     public int level = 0;
     public int col = 0;

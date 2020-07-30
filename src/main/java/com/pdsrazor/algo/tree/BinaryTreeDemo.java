@@ -854,6 +854,7 @@ public class BinaryTreeDemo extends MyDemo {
                 if (arr[i] >= p.value) {
                     if (p.right == null) {
                         p.right = new BinaryTreeNode(arr[i]);
+                        p.right.parent = p;
                         break;
                     }
                     p = p.right;
@@ -861,6 +862,7 @@ public class BinaryTreeDemo extends MyDemo {
                 if (arr[i] < p.value) {
                     if (p.left == null) {
                         p.left = new BinaryTreeNode(arr[i]);
+                        p.left.parent = p;
                         break;
                     }
                     p = p.left;

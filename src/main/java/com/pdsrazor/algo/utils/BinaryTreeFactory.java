@@ -74,6 +74,7 @@ public class BinaryTreeFactory {
             //System.out.println("gen left");
             BinaryTreeNode node = new BinaryTreeNode(getNextValue());
             root.left = node;
+            node.parent = root;
             if (leftSize - 1 > 0) {
                 leftSize = ranDomCallBack(node, leftSize-1) + 1;
             } else {
@@ -84,6 +85,7 @@ public class BinaryTreeFactory {
             //System.out.println("gen right");
             BinaryTreeNode node = new BinaryTreeNode(getNextValue());
             root.right = node;
+            node.parent = root;
             if (rightSize - 1 > 0) {
                 rightSize = ranDomCallBack(node, rightSize-1) + 1;
             } else {
