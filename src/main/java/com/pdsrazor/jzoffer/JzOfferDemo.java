@@ -16,6 +16,8 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  isSymmetrical <size>");
         System.out.println("  PrintLevel <size>");
         System.out.println("  PrintZ <size>");
+        System.out.println("  SerializeTree <size>");
+        System.out.println("  MidData");
     }
 
     @Override
@@ -53,6 +55,12 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("PrintZ")) {
             new Jz59_PrintZ().solute(solutionArgs);
+        }
+        if (args[0].equals("SerializeTree")) {
+            new Jz61_SerializeTree().solute(solutionArgs);
+        }
+        if (args[0].equals("MidData")) {
+            new Jz63_MidData().solute(solutionArgs);
         }
         return 0;
     }
