@@ -18,6 +18,10 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  PrintZ <size>");
         System.out.println("  SerializeTree <size>");
         System.out.println("  MidData");
+        System.out.println("  KthNodeInBST <size> <k>");
+        System.out.println("  FindGreatestSumOfSubArray");
+        System.out.println("  GetNumberOfK");
+        System.out.println("  FindNumsAppearOnce");   
     }
 
     @Override
@@ -32,11 +36,20 @@ public class JzOfferDemo extends MyDemo {
         if (args[0].equals("GetLeastNumbers")) {
             new Jz29_GetLeastNumbers().solute(solutionArgs);
         }
+        if (args[0].equals("FindGreatestSumOfSubArray")) {
+            new Jz30_FindGreatestSumOfSubArray().solute(solutionArgs);
+        }
+        if (args[0].equals("GetNumberOfK")) {
+            new Jz37_GetNumberOfK().solute(solutionArgs);
+        }
         if (args[0].equals("TreeDepth")) {
             new Jz38_TreeDepth().solute(solutionArgs);
         }
         if (args[0].equals("IsBalancedTree")) {
             new Jz39_IsBalancedTree().solute(solutionArgs);
+        }
+        if (args[0].equals("FindNumsAppearOnce")) {
+            new Jz40_FindNumsAppearOnce().solute(solutionArgs);
         }
         if (args[0].equals("LastRemaining")) {
             new Jz46_LastRemaining().solute(solutionArgs);
@@ -58,6 +71,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("SerializeTree")) {
             new Jz61_SerializeTree().solute(solutionArgs);
+        }
+        if (args[0].equals("KthNodeInBST")) {
+            new Jz62_KthNodeInBST().solute(solutionArgs);
         }
         if (args[0].equals("MidData")) {
             new Jz63_MidData().solute(solutionArgs);

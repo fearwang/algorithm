@@ -22,6 +22,7 @@ public class BinaryTreeDemo extends MyDemo {
         System.out.println("  getPostCursorNodeFromBST <size>");
         System.out.println("  getMaxNodeFromBST <size>");
         System.out.println("  getMinNodeFromBST <size>");
+        System.out.println("  walkNoRecur <size>");
     }
 
     public int doCmd(String args[]) {
@@ -198,6 +199,32 @@ public class BinaryTreeDemo extends MyDemo {
             System.out.println("delete data: " + rets);
             bstDup.deleteList(rets);
             bstDup.print();
+            return 1;
+        }
+        if (args[0].equals("walkNoRecur")) {
+            int size = Integer.parseInt(args[1]);
+            BinaryTreeFactory factory = new BinaryTreeFactory(size);
+            BinaryTreeNode root = factory.genLinkedBinaryTree(size, BinaryTreeFactory.GEN_RANDOM);
+            if (root != null) {
+                graphPrintBinaryTree(root);
+                System.out.print("In order: ");
+                walkInOrderNoRecur(root);
+                System.out.print("Pre order: ");
+                walkPreOrderNoRecur(root);
+                System.out.print("Post order: ");
+                walkPostOrderNoRecur(root);
+
+                System.out.println("\n ---------recur result: -----------------");
+                System.out.print("In order: ");
+                walkInOrder(root, new PrintCallback());
+                System.out.println();
+                System.out.print("Pre order: ");
+                walkPreOrder(root, new PrintCallback());
+                System.out.println();
+                System.out.print("Post order: ");
+                walkPostOrder(root, new PrintCallback());
+                System.out.println();
+            }
             return 1;
         }
         return 0;
@@ -1075,7 +1102,8 @@ public class BinaryTreeDemo extends MyDemo {
 
     public static class PrintCallback extends WalkCallBack {
         public void handleNode(BinaryTreeNode node) {
-            System.out.print(node.value + ":" + node.col + " ");
+            //System.out.print(node.value + ":" + node.col + " ");
+            System.out.print(node.value + " ");
         }
     }
 
@@ -1314,6 +1342,101 @@ public class BinaryTreeDemo extends MyDemo {
             System.out.println(mBuilder1.toString());
             System.out.println(mBuilder2.toString());
         }
+    }
+
+    // --------------- 非递归遍历------------------
+    void walkInOrderNoRecur(BinaryTreeNode root) {
+        if (root == null) return;
+        Stack<BinaryTreeNode> stack = new Stack<>();
+        BinaryTreeNode p = root;
+        /*
+        while (true) {
+            if (stack.size() <= 0 || p != stack.peek()) {
+                if (p.left != null) {
+                    stack.push(p);
+                    p = p.left;
+                } else {
+                    System.out.print(p.value + " ");
+                    if (p.right != null) {
+                        p = p.right;
+                    } else {
+                        if (stack.size() <= 0) break;
+                        p = stack.peek();
+                    }
+                }
+            } else {
+                p = stack.pop();
+                System.out.print(p.value + " ");
+                if (p.right != null) {
+                    p = p.right;
+                } else {
+                    if (stack.size() <= 0) break;
+                    p = stack.peek();
+                }
+            }
+        }*/
+        while (p != null || stack.size() > 0) {
+            while (p != null) {
+                stack.push(p);
+                p = p.left;
+            }
+            if (stack.size() > 0) {
+                p = stack.pop();
+                System.out.print(p.value + " ");
+                p = p.right;
+            }
+        }
+        System.out.println();
+    }
+    
+    void walkPreOrderNoRecur(BinaryTreeNode root) {
+        if (root == null) return;
+        Stack<BinaryTreeNode> stack = new Stack<>();
+        BinaryTreeNode p = root;
+        /*
+        stack.push(p);
+        do {
+            p = stack.pop();
+            System.out.print(p.value + " ");
+            if (p.right != null) stack.push(p.right);
+            if (p.left != null) stack.push(p.left);
+        } while (stack.size() > 0);*/
+        while (p != null || stack.size() > 0) {
+            while (p != null) {
+                System.out.print(p.value + " ");
+                stack.push(p);
+                p = p.left;
+            }
+            if (stack.size() > 0) {
+                p = stack.pop();
+                p = p.right;
+            }
+        }
+        System.out.println();
+    }
+    
+    void walkPostOrderNoRecur(BinaryTreeNode root) {
+        if (root == null) return;
+        Stack<BinaryTreeNode> stack = new Stack<>();
+        BinaryTreeNode p = root;
+        BinaryTreeNode backfrom = null;
+        while (p != null || stack.size() > 0) {
+            if (p != null) {
+                stack.push(p);
+                p = p.left;
+            } else {
+                p = stack.peek();
+                if (p.right != null && p.right != backfrom) { // 第一次栈顶
+                    p = p.right;
+                } else {
+                    p = stack.pop(); // 第二次stack top
+                    System.out.print(p.value + " ");
+                    backfrom = p;
+                    p = null;
+                }
+            }
+        }
+        System.out.println();
     }
 
     // ---------- 其他util接口 -------------
