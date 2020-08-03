@@ -21,7 +21,9 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  KthNodeInBST <size> <k>");
         System.out.println("  FindGreatestSumOfSubArray");
         System.out.println("  GetNumberOfK");
-        System.out.println("  FindNumsAppearOnce");   
+        System.out.println("  FindNumsAppearOnce");
+        System.out.println("  duplicate");
+        System.out.println("  isNumeric");
     }
 
     @Override
@@ -53,6 +55,12 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("LastRemaining")) {
             new Jz46_LastRemaining().solute(solutionArgs);
+        }
+        if (args[0].equals("duplicate")) {
+            new Jz50_duplicate().solute(solutionArgs);
+        }
+        if (args[0].equals("isNumeric")) {
+            new Jz53_isNumeric().solute(solutionArgs);
         }
         if (args[0].equals("DeleteDuplication")) {
             new Jz56_deleteDuplication().solute(solutionArgs);
