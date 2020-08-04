@@ -24,6 +24,11 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  FindNumsAppearOnce");
         System.out.println("  duplicate");
         System.out.println("  isNumeric");
+        System.out.println("  FirstNotRepeatingChar");
+        System.out.println("  FirstNotRepeatCharInStream");
+        System.out.println("  isContinuous");
+        System.out.println("  FindContinuousSequence");
+        System.out.println("  FindNumbersWithSum");
     }
 
     @Override
@@ -41,6 +46,9 @@ public class JzOfferDemo extends MyDemo {
         if (args[0].equals("FindGreatestSumOfSubArray")) {
             new Jz30_FindGreatestSumOfSubArray().solute(solutionArgs);
         }
+        if (args[0].equals("FirstNotRepeatingChar")) {
+            new Jz34_FirstNotRepeatingChar().solute(solutionArgs);
+        }
         if (args[0].equals("GetNumberOfK")) {
             new Jz37_GetNumberOfK().solute(solutionArgs);
         }
@@ -53,6 +61,15 @@ public class JzOfferDemo extends MyDemo {
         if (args[0].equals("FindNumsAppearOnce")) {
             new Jz40_FindNumsAppearOnce().solute(solutionArgs);
         }
+        if (args[0].equals("FindContinuousSequence")) {
+            new Jz41_FindContinuousSequence().solute(solutionArgs);
+        }
+        if (args[0].equals("FindNumbersWithSum")) {
+            new Jz42_FindNumbersWithSum().solute(solutionArgs);
+        }
+        if (args[0].equals("isContinuous")) {
+            new Jz45_isContinuous().solute(solutionArgs);
+        }
         if (args[0].equals("LastRemaining")) {
             new Jz46_LastRemaining().solute(solutionArgs);
         }
@@ -61,6 +78,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("isNumeric")) {
             new Jz53_isNumeric().solute(solutionArgs);
+        }
+        if (args[0].equals("FirstNotRepeatCharInStream")) {
+            new Jz54_FirstNotRepeatCharInStream().solute(solutionArgs);
         }
         if (args[0].equals("DeleteDuplication")) {
             new Jz56_deleteDuplication().solute(solutionArgs);
