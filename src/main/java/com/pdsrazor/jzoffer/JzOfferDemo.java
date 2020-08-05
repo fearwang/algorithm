@@ -29,6 +29,8 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  isContinuous");
         System.out.println("  FindContinuousSequence");
         System.out.println("  FindNumbersWithSum");
+        System.out.println("  InversePairs");
+        System.out.println("  maxInWindows");
     }
 
     @Override
@@ -48,6 +50,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("FirstNotRepeatingChar")) {
             new Jz34_FirstNotRepeatingChar().solute(solutionArgs);
+        }
+        if (args[0].equals("InversePairs")) {
+            new Jz35_InversePairs().solute(solutionArgs);
         }
         if (args[0].equals("GetNumberOfK")) {
             new Jz37_GetNumberOfK().solute(solutionArgs);
@@ -105,6 +110,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("MidData")) {
             new Jz63_MidData().solute(solutionArgs);
+        }
+        if (args[0].equals("maxInWindows")) {
+            new Jz64_maxInWindows().solute(solutionArgs);
         }
         return 0;
     }
