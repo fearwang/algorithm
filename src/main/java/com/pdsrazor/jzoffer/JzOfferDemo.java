@@ -31,6 +31,8 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  FindNumbersWithSum");
         System.out.println("  InversePairs");
         System.out.println("  maxInWindows");
+        System.out.println("  movingCount");
+        System.out.println("  hasPath");
     }
 
     @Override
@@ -113,6 +115,12 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("maxInWindows")) {
             new Jz64_maxInWindows().solute(solutionArgs);
+        }
+        if (args[0].equals("hasPath")) {
+            new Jz65_hasPath().solute(solutionArgs);
+        }
+        if (args[0].equals("movingCount")) {
+            new Jz66_movingCount().solute(solutionArgs);
         }
         return 0;
     }
