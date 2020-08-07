@@ -33,6 +33,7 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  maxInWindows");
         System.out.println("  movingCount");
         System.out.println("  hasPath");
+        System.out.println("  RegMatch");
     }
 
     @Override
@@ -82,6 +83,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("duplicate")) {
             new Jz50_duplicate().solute(solutionArgs);
+        }
+        if (args[0].equals("RegMatch")) {
+            new Jz52_RegMatch().solute(solutionArgs);
         }
         if (args[0].equals("isNumeric")) {
             new Jz53_isNumeric().solute(solutionArgs);
