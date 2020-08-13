@@ -34,6 +34,9 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  movingCount");
         System.out.println("  hasPath");
         System.out.println("  RegMatch");
+        System.out.println("  PrintMinNumber");
+        System.out.println("  cutRope");
+        System.out.println("  uglyNumber");
     }
 
     @Override
@@ -50,6 +53,12 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("FindGreatestSumOfSubArray")) {
             new Jz30_FindGreatestSumOfSubArray().solute(solutionArgs);
+        }
+        if (args[0].equals("PrintMinNumber")) {
+            new Jz32_PrintMinNumber().solute(solutionArgs);
+        }
+        if (args[0].equals("uglyNumber")) {
+            new Jz33_UglyNumber().solute(solutionArgs);
         }
         if (args[0].equals("FirstNotRepeatingChar")) {
             new Jz34_FirstNotRepeatingChar().solute(solutionArgs);
@@ -125,6 +134,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("movingCount")) {
             new Jz66_movingCount().solute(solutionArgs);
+        }
+        if (args[0].equals("cutRope")) {
+            new Jz67_cutRope().solute(solutionArgs);
         }
         return 0;
     }
