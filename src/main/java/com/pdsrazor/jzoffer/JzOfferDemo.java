@@ -6,6 +6,7 @@ public class JzOfferDemo extends MyDemo {
     @Override
     public void usage() {
         System.out.println("JzOfferDemo:");
+        System.out.println("  Find");
         System.out.println("  MoreThanHalfNum");
         System.out.println("  GetLeastNumbers <k>");
         System.out.println("  TreeDepth <size>");
@@ -20,6 +21,7 @@ public class JzOfferDemo extends MyDemo {
         System.out.println("  MidData");
         System.out.println("  KthNodeInBST <size> <k>");
         System.out.println("  FindGreatestSumOfSubArray");
+        System.out.println("  NumberOf1");
         System.out.println("  GetNumberOfK");
         System.out.println("  FindNumsAppearOnce");
         System.out.println("  duplicate");
@@ -45,6 +47,9 @@ public class JzOfferDemo extends MyDemo {
         for (int i = 0; i < args.length - 1; i++) {
             solutionArgs[i] = args[i+1];
         }
+        if (args[0].equals("Find")) {
+            new Jz1_find().solute(solutionArgs);
+        }
         if (args[0].equals("MoreThanHalfNum")) {
             new Jz28_MoreThanHalfNum().solute(solutionArgs);
         }
@@ -53,6 +58,9 @@ public class JzOfferDemo extends MyDemo {
         }
         if (args[0].equals("FindGreatestSumOfSubArray")) {
             new Jz30_FindGreatestSumOfSubArray().solute(solutionArgs);
+        }
+        if (args[0].equals("NumberOf1")) {
+            new Jz31_NumberOf1().solute(solutionArgs);
         }
         if (args[0].equals("PrintMinNumber")) {
             new Jz32_PrintMinNumber().solute(solutionArgs);
