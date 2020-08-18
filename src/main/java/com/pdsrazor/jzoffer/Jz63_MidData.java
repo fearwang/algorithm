@@ -221,4 +221,61 @@ public class Jz63_MidData extends Solution {
             return (double)bigtop.get(1);
         }
     }
+
+    /*
+    PriorityQueue<Integer> bigTop = new PriorityQueue(new BigTopCmp());
+    PriorityQueue<Integer> smallTop = new PriorityQueue(new SmallTopCmp());
+    public void Insert(Integer num) {
+        bigTop.add(num);
+        smallTop.add(bigTop.poll());
+        if (bigTop.size() < smallTop.size()) {
+            bigTop.add(smallTop.poll());
+        }
+    }
+
+    public Double GetMedian() {
+        if (bigTop.size() == 0) return 0.0;
+        if (bigTop.size() > smallTop.size()) return (double)bigTop.peek();
+        else return ((double)bigTop.peek() + (double)smallTop.peek())/2;
+    }
+
+    class BigTopCmp implements Comparator<Integer> {
+        public int compare(Integer o1, Integer o2) {
+            return o2 - o1;
+        }
+    }
+    class SmallTopCmp implements Comparator<Integer> {
+        public int compare(Integer o1, Integer o2) {
+            return o1 - o2;
+        }
+    }*/
+
+    /*
+    ArrayList<Integer> list = new ArrayList<>();
+    Comparator cmp = new SmallTopCmp();
+    public void Insert(Integer num) {
+        list.add(num);
+        list.sort(cmp);
+    }
+
+    public Double GetMedian() {
+        int mid = list.size()/2;
+
+        if (list.size() % 2 == 0) {
+            return ((double)list.get(mid) + (double)list.get(mid-1))/2;
+        } else {
+            return (double)list.get(mid);
+        }
+    }
+
+    class BigTopCmp implements Comparator<Integer> {
+        public int compare(Integer o1, Integer o2) {
+            return o2 - o1;
+        }
+    }
+    class SmallTopCmp implements Comparator<Integer> {
+        public int compare(Integer o1, Integer o2) {
+            return o1 - o2;
+        }
+    } */
 }
