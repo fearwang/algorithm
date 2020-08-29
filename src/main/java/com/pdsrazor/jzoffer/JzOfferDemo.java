@@ -50,6 +50,9 @@ public class JzOfferDemo extends MyDemo {
         if (args[0].equals("Find")) {
             new Jz1_find().solute(solutionArgs);
         }
+        if (args[0].equals("JumpFloor")) {
+            new Jz8_JumpFloor().solute(solutionArgs);
+        }
         if (args[0].equals("MoreThanHalfNum")) {
             new Jz28_MoreThanHalfNum().solute(solutionArgs);
         }
